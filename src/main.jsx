@@ -23,18 +23,20 @@ const router = createBrowserRouter([
       },
       {
         path: "/signup",
-        element: <SignUp></SignUp>
+        element: <SignUp></SignUp>,
       },
       {
         path: "/program-application",
-        element: <MahofilForm></MahofilForm>
-      }
+        element: <MahofilForm></MahofilForm>,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <main className="max-w-6xl mx-auto">
+      <RouterProvider router={router} />
+    </main>
   </React.StrictMode>
 );

@@ -8,8 +8,8 @@ body {
   font-family: 'Hind Siliguri', sans-serif;
 }
 
-.quote {
-  background-image: url(./../public/quote.png);
+input, .quote {
+  background-image: url(./../public/quote2.png);
   background-size: cover;
   background-position: center;
 }
