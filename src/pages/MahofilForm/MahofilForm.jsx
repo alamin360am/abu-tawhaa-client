@@ -69,14 +69,25 @@ const MahofilForm = () => {
     setSelectedUnion(event.target.value);
   };
 
-  console.log(selectedDistrict);
-
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
     const applicantName = form.applicantName.value;
     const mobileNo = form.mobileNo.value;
     const date = form.date.value;
+    const programmeAddress = form.programmeAddress.value;
+    const googleMapLink = form.googleMapLink.value;
+    const mahofilPlace = form.mahofilPlace.value;
+    const arrangementPrinciple = form.arrangementPrinciple.value;
+    const mahofilNo = form.mahofilNo.value;
+    const lastMahfilDay = form.lastMahfilDay.value;
+    const guestList = form.guestList.value;
+    const MahfilTime = form.MahfilTime.value;
+    const mahfilSubject = form.mahfilSubject.value;
+    const lastMahfilSpeaker = form.lastMahfilSpeaker.value;
+    const whatsTypeOf = form.whatsTypeOf.value;
+    const politicalPerson = form.politicalPerson.value;
+    const salary = form.salary.value;
     const applicationData = {
       applicantName,
       mobileNo,
@@ -85,6 +96,19 @@ const MahofilForm = () => {
       selectedDistrict,
       selectedUpazela,
       selectedUnion,
+      programmeAddress,
+      googleMapLink,
+      mahofilPlace,
+      arrangementPrinciple,
+      mahofilNo,
+      lastMahfilDay,
+      guestList,
+      MahfilTime,
+      mahfilSubject,
+      lastMahfilSpeaker,
+      whatsTypeOf,
+      politicalPerson,
+      salary
     };
     console.log(applicationData);
   };
@@ -100,7 +124,7 @@ const MahofilForm = () => {
           "যে ব্যক্তি মানুষকে আল্লাহর পথে দাওয়াত দেয়, সৎকর্ম করে আর বলে, ‘আমি তো মুসলমানদের একজন’, তার চেয়ে উত্তম আর কে হতে পারে? (সূরা হা-মিম-সাজদা: ৩৩)"
         }
       ></Quote>
-      <p className="text-red-500 mb-4">
+      <p className="text-red-500 mb-4 text-center">
         ফর্মের নিচে আমাদের নীতিমালা ও শর্তাবলী দেওয়া আছে। আবেদনের পূর্বে
         নীতিমালা ও শর্তাবলী পড়ে নিবেন ইনশাআল্লাহ।
       </p>
@@ -227,7 +251,7 @@ const MahofilForm = () => {
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="programmeAddress"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
@@ -239,7 +263,7 @@ const MahofilForm = () => {
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="googleMapLink"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
@@ -251,7 +275,7 @@ const MahofilForm = () => {
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="mahofilPlace"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
@@ -263,7 +287,7 @@ const MahofilForm = () => {
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="arrangementPrinciple"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
@@ -275,7 +299,7 @@ const MahofilForm = () => {
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="mahofilNo"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
@@ -287,7 +311,7 @@ const MahofilForm = () => {
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="date"
-            name=""
+            name="lastMahfilDay"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
@@ -299,7 +323,7 @@ const MahofilForm = () => {
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="guestList"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
@@ -312,7 +336,7 @@ const MahofilForm = () => {
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="MahfilTime"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
@@ -324,11 +348,12 @@ const MahofilForm = () => {
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="mahfilSubject"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
         </div>
+        {/* TODO : Radio Button */}
         <div className="md:w-[600px] w-full h-20 flex items-center relative">
           <p className="absolute -top-2 left-20 text-green-700">
             মাহফিলে আবু ত্বহা মুহাম্মাদ আদনানকে অর্থ কালেকশন করতে হবে কি না?
@@ -348,11 +373,12 @@ const MahofilForm = () => {
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="lastMahfilSpeaker"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
         </div>
+        {/* TODO : Radio button */}
         <div className="md:w-[600px] w-full h-20 flex items-center relative">
           <p className="absolute -top-2 left-20 text-green-700">
             বিগত বছরের মাহফিলের জন্য প্রশাসনের অনুমতি নেওয়া হয়েছিল কি না?
@@ -365,6 +391,7 @@ const MahofilForm = () => {
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
         </div>
+        {/* TODO : Radio button */}
         <div className="md:w-[600px] w-full h-20 flex items-center relative">
           <p className="absolute -top-2 left-20 text-green-700">
             এই বছরের মাহফিলের জন্য প্রশাসনের লিখিত অনুমতি নিতে পারবেন কিনা?
@@ -377,6 +404,7 @@ const MahofilForm = () => {
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
         </div>
+        {/* TODO : Radio button */}
         <div className="md:w-[600px] w-full h-20 flex items-center relative">
           <p className="absolute -top-2 left-20 text-green-700">
             পর্যাপ্ত ভলান্টিয়ার থাকবে কি না ?
@@ -389,6 +417,7 @@ const MahofilForm = () => {
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
         </div>
+        {/* TODO : Radio button */}
         <div className="md:w-[600px] w-full h-20 flex items-center relative">
           <p className="absolute -top-2 left-20 text-green-700">
             মাহফিলের সাথে কোনো ধর্মীয় দলের সম্পৃক্ততা আছে কি না?
@@ -402,27 +431,27 @@ const MahofilForm = () => {
           />
         </div>
         <div className="md:w-[600px] w-full h-20 flex items-center relative">
-          <p className="absolute -top-2 left-20 text-green-700">
+          <p className="absolute -top-5 left-20 text-green-700">
             মাহফিলটি কোন ঘোরানার মানুষদের মধ্যে হবে? ( হানাফি/ আহলে হাদিস/
             তাবলীগ/ জামায়াত/ চরমোনাই ইত্যাদি )
           </p>
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="whatsTypeOf"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
         </div>
         <div className="md:w-[600px] w-full h-20 flex items-center relative">
-          <p className="absolute -top-2 left-20 text-green-700">
+          <p className="absolute -top-5 left-20 text-green-700">
             মাহফিলে কোনো রাজনৈতিক ব্যক্তি উপস্থিত থাকবেন কিনা? ( থাকলে তার নাম ও
             রাজনৈতিক পদবী )
           </p>
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="politicalPerson"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
@@ -434,13 +463,14 @@ const MahofilForm = () => {
           <img src={inputImg} alt="" className="h-full z-10" />
           <input
             type="text"
-            name=""
+            name="salary"
             id=""
             className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
           />
         </div>
+        {/* TODO : Radio button */}
         <div className="md:w-[600px] w-full h-20 flex items-center relative">
-          <p className="absolute -top-2 left-20 text-green-700">
+          <p className="absolute -top-5 left-20 text-green-700">
             বক্তার ব্যক্তিগত, অসুস্থতা, প্রশাসনিক ও অন্যান্য প্রাসঙ্গিক কারণে
             বক্তা কর্তৃক মাহফিল স্থগিত কিংবা তারিখ পরিবর্তন করার সম্পুর্ন
             এখতিয়ার থাকবে
@@ -456,7 +486,7 @@ const MahofilForm = () => {
         <input
           type="submit"
           value="আবেদন করুন"
-          className="bg-green-700 text-white px-8 py-4"
+          className="bg-green-700 text-white px-8 py-4 rounded hover:bg-green-800 cursor-pointer"
         />
       </form>
     </section>
