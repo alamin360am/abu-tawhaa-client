@@ -179,6 +179,7 @@ const MahofilForm = () => {
                 type="text"
                 name="applicantName"
                 className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -191,6 +192,7 @@ const MahofilForm = () => {
                 name="mobileNo"
                 id=""
                 className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -203,6 +205,7 @@ const MahofilForm = () => {
                 name="date"
                 id=""
                 className="w-full pl-16 pr-4 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full gap-2 flex flex-col md:flex-row md:gap-10 items-center">
@@ -292,6 +295,7 @@ const MahofilForm = () => {
                 name="programmeAddress"
                 id=""
                 className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -316,6 +320,7 @@ const MahofilForm = () => {
                 name="mahofilPlace"
                 id=""
                 className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -328,6 +333,7 @@ const MahofilForm = () => {
                 name="arrangementPrinciple"
                 id=""
                 className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -340,6 +346,7 @@ const MahofilForm = () => {
                 name="mahofilNo"
                 id=""
                 className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -352,6 +359,7 @@ const MahofilForm = () => {
                 name="lastMahfilDay"
                 id=""
                 className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -364,6 +372,7 @@ const MahofilForm = () => {
                 name="guestList"
                 id=""
                 className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -377,6 +386,7 @@ const MahofilForm = () => {
                 name="MahfilTime"
                 id=""
                 className="w-full md:mt-0 mt-7 pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -389,6 +399,7 @@ const MahofilForm = () => {
                 name="mahfilSubject"
                 id=""
                 className="w-full md:mt-0 mt-8 pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -431,6 +442,7 @@ const MahofilForm = () => {
                 name="lastMahfilSpeaker"
                 id=""
                 className="w-full md:mt-0 mt-7 pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -463,7 +475,6 @@ const MahofilForm = () => {
                 </div>
               </div>
             </div>
-            {/* TODO : Radio button */}
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
               <p className="absolute -top-2 left-20 text-green-700">
                 এই বছরের মাহফিলের জন্য প্রশাসনের লিখিত অনুমতি নিতে পারবেন কিনা?
@@ -565,6 +576,7 @@ const MahofilForm = () => {
                 name="whatsTypeOf"
                 id=""
                 className="w-full md:mt-0 mt-8 pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -578,6 +590,7 @@ const MahofilForm = () => {
                 name="politicalPerson"
                 id=""
                 className="w-full md:mt-0 mt-8 pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
@@ -590,6 +603,7 @@ const MahofilForm = () => {
                 name="salary"
                 id=""
                 className="w-full md:mt-0 mt-8 pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
+                required
               />
             </div>
             <div className="md:w-[600px] w-full h-20 flex items-center relative">
