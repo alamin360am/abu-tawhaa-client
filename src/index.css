@@ -14,3 +14,28 @@ input, .quote {
   background-size: cover;
   background-position: center;
 }
+
+.radio-container [type="radio"]{
+  display: none;
+}
+
+.radio-container label{
+  display: block;
+  padding: 10px 20px;
+  border:2px solid #15ad1d;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.radio-container [type="radio"]:checked ~ label{
+  background-color: #15ad1d;
+  color: #fff;
+}
+
+.radio-container [type="radio"]:checked ~ label:before{
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
