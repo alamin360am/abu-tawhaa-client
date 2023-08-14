@@ -162,16 +162,17 @@ const MahofilForm = () => {
               "যে ব্যক্তি মানুষকে আল্লাহর পথে দাওয়াত দেয়, সৎকর্ম করে আর বলে, ‘আমি তো মুসলমানদের একজন’, তার চেয়ে উত্তম আর কে হতে পারে? (সূরা হা-মিম-সাজদা: ৩৩)"
             }
           ></Quote>
-          <p className="text-red-500 mb-4 text-center">
+          <p className="text-red-500 mb-10 text-center">
             ফর্মের নিচে আমাদের নীতিমালা ও শর্তাবলী দেওয়া আছে। আবেদনের পূর্বে
             নীতিমালা ও শর্তাবলী পড়ে নিবেন ইনশাআল্লাহ।
           </p>
           <form
             onSubmit={handleSubmit}
-            className="flex items-center flex-col p-4 gap-8"
+            className="flex items-center flex-col pr-5 md:p-4 gap-8"
           >
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/* আবেদনকারীর নাম */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative mb-4 md:mb-0">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                 আবেদনকারীর নাম
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
@@ -182,8 +183,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/* আবেদনকারীর মোবাইল নম্বর */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative">
+              <p className="absolute md:-top-2 -top-9 left-20 text-green-700">
                 আবেদনকারীর মোবাইল নম্বর (ইংরেজিতে)
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
@@ -195,8 +197,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/* মাহফিলের প্রস্তাবিত তারিখ */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                 মাহফিলের প্রস্তাবিত তারিখ
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
@@ -209,11 +212,11 @@ const MahofilForm = () => {
               />
             </div>
             <div className="md:w-[600px] w-full gap-2 flex flex-col md:flex-row md:gap-10 items-center">
-              <div className="w-full h-full flex items-center relative">
-                <p className="absolute -top-2 left-20 text-green-700">
+              <div className="w-full h-full flex items-center relative md:mb-0 mb-4">
+                <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                   মাহফিল কোন বিভাগে করতে চান?
                 </p>
-                <img src={inputImg} className="h-20 z-10" />
+                <img src={inputImg} className="h-16 md:h-20 z-10" />
                 <select
                   value={selectedDivision}
                   onChange={divisionSelect}
@@ -228,10 +231,10 @@ const MahofilForm = () => {
                 </select>
               </div>
               <div className="w-full h-full flex items-center relative">
-                <p className="absolute -top-2 md:-top-5 left-20 text-green-700">
+                <p className="absolute -top-4 md:-top-5 left-20 text-green-700">
                   মাহফিল কোন জেলায় করতে চান?
                 </p>
-                <img src={inputImg} alt="" className="h-20 z-10" />
+                <img src={inputImg} alt="" className="h-16 md:h-20 z-10" />
                 <select
                   onChange={districtSelect}
                   className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
@@ -246,11 +249,11 @@ const MahofilForm = () => {
               </div>
             </div>
             <div className="md:w-[600px] w-full gap-2 flex flex-col md:flex-row md:gap-10 items-center">
-              <div className="w-full h-full flex items-center relative">
-                <p className="absolute -top-2 md:-top-5 left-20 text-green-700">
+              <div className="w-full h-full flex items-center relative md:mb-0 mb-4">
+                <p className="absolute -top-4 md:-top-5 left-20 text-green-700">
                   মাহফিল কোন উপজেলা করতে চান?
                 </p>
-                <img src={inputImg} alt="" className="h-20 z-10" />
+                <img src={inputImg} alt="" className="h-16 md:h-20 z-10" />
                 <select
                   name=""
                   id=""
@@ -266,10 +269,10 @@ const MahofilForm = () => {
                 </select>
               </div>
               <div className="w-full h-full flex items-center relative">
-                <p className="absolute -top-2 md:-top-5 left-20 text-green-700">
+                <p className="absolute -top-4 md:-top-5 left-20 text-green-700">
                   মাহফিল কোন ইউনিয়নে করতে চান?
                 </p>
-                <img src={inputImg} alt="" className="h-20 z-10" />
+                <img src={inputImg} alt="" className="h-16 md:h-20 z-10" />
                 <select
                   name=""
                   id=""
@@ -285,8 +288,9 @@ const MahofilForm = () => {
                 </select>
               </div>
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/* প্রোগ্রাস্থলের বিস্তারিত ঠিকানা */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-4">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                 প্রোগ্রাস্থলের বিস্তারিত ঠিকানা
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
@@ -298,8 +302,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-5 md:-top-2 left-20 text-green-700">
+            {/* গুগল ম্যাপ */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-4">
+              <p className="absolute md:-top-2 -top-8 left-20 text-green-700">
                 গুগল ম্যাপ এর প্রোগ্রাস্থলের ঠিকানার লিংক (যদি পারেন)
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
@@ -310,8 +315,9 @@ const MahofilForm = () => {
                 className="w-full pl-16 pr-2 py-2 absolute z-0 left-6 rounded-full bg-white focus:outline-none border-4 border-green-800"
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-5 md:-top-2 left-20 text-green-700">
+            {/* যে মাঠে বা মিলনায়তনে মাহফিল করতে চান তার নাম */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:md:-top-2 -top-8 left-20 text-green-700">
                 যে মাঠে বা মিলনায়তনে মাহফিল করতে চান তার নাম
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
@@ -323,8 +329,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-5 md:-top-2 left-20 text-green-700">
+            {/* সভাপতির নাম ও মোবাইল নম্বর */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative">
+              <p className="absolute md:-top-2 -top-8 left-20 text-green-700">
                 মাহফিলের প্রধান আয়োজক/সভাপতির নাম ও মোবাইল নম্বর
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
@@ -336,8 +343,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/* কততম মাহফিল? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                 এটি এই জায়গার কততম মাহফিল?
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
@@ -349,8 +357,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-5 md:-top-2 left-20 text-green-700">
+            {/* সর্বশেষ কবে এই জায়গায় মাহফিল হয়েছিল? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:-top-2 -top-7 left-20 text-green-700">
                 সর্বশেষ কবে এই জায়গায় মাহফিল হয়েছিল?
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
@@ -362,8 +371,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-5 md:-top-2 left-20 text-green-700">
+            {/* মাহফিলের আলোচক হিসাবে আর কে কে উপস্থিত থাকবেন? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:-top-2 -top-8 left-20 text-green-700">
                 মাহফিলের আলোচক হিসাবে আর কে কে উপস্থিত থাকবেন?
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
@@ -375,8 +385,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-5 md:-top-2 left-20 text-green-700">
+            {/* কোন সময় থেকে কোন সময় পর্যন্ত আলোচনা করতে হবে? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:-top-2 -top-8 left-20 text-green-700">
                 আবু ত্বহা মুহাম্মাদ আদনান কে কোন সময় থেকে কোন সময় পর্যন্ত আলোচনা
                 করতে হবে?
               </p>
@@ -389,8 +400,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/* কী বিষয়ে আলোচনা করার অনুরোধ করবেন? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                 কী বিষয়ে আলোচনা করার অনুরোধ করবেন?
               </p>
               <img src={inputImg} alt="" className="h-full z-10 md:mt-0 mt-8" />
@@ -402,12 +414,13 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/* অর্থ কালেকশন করতে হবে কি না? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                 মাহফিলে আবু ত্বহা মুহাম্মাদ আদনানকে অর্থ কালেকশন করতে হবে কি না?
               </p>
               <img src={inputImg} alt="" className="h-full z-10 mt-7 md:mt-0" />
-              <div className="ml-4 flex  gap-8 radio-container mt-7 md:mt-0">
+              <div className="ml-4 flex  gap-2 md:gap-8 radio-container mt-7 md:mt-0">
                 <div className="radio-container">
                   <input
                     type="radio"
@@ -432,8 +445,9 @@ const MahofilForm = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/*  বিগত বছরের মাহফিলে আলোচক ছিলেন কে কে? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                 বিগত বছরের মাহফিলে আলোচক ছিলেন কে কে?
               </p>
               <img src={inputImg} alt="" className="h-full z-10 md:mt-0 mt-7" />
@@ -445,12 +459,13 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/* বিগত বছরের মাহফিলের জন্য প্রশাসনের অনুমতি নেওয়া হয়েছিল কি না? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                 বিগত বছরের মাহফিলের জন্য প্রশাসনের অনুমতি নেওয়া হয়েছিল কি না?
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
-              <div className="ml-4 flex  gap-8 radio-container mt-7 md:mt-0">
+              <div className="ml-4 flex gap-2 md:gap-8 radio-container mt-7 md:mt-0">
                 <div className="radio-container">
                   <input
                     type="radio"
@@ -475,12 +490,13 @@ const MahofilForm = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/* এই বছরের মাহফিলের জন্য প্রশাসনের লিখিত অনুমতি নিতে পারবেন কিনা? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                 এই বছরের মাহফিলের জন্য প্রশাসনের লিখিত অনুমতি নিতে পারবেন কিনা?
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
-              <div className="ml-4 flex  gap-8 radio-container mt-7 md:mt-0">
+              <div className="ml-4 flex gap-2 md:gap-8 radio-container mt-7 md:mt-0">
                 <div className="radio-container">
                   <input
                     type="radio"
@@ -505,12 +521,13 @@ const MahofilForm = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
-                পর্যাপ্ত ভলান্টিয়ার থাকবে কি না ?
+            {/* পর্যাপ্ত ভলান্টিয়ার থাকবে কি না ? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
+                পর্যাপ্ত ভলান্টিয়ার থাকবে কি না?
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
-              <div className="ml-4 flex gap-4 radio-container">
+              <div className="ml-4 flex gap-2 md:gap-8 radio-container">
                 <div className="radio-container">
                   <input
                     type="radio"
@@ -535,12 +552,13 @@ const MahofilForm = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/* ধর্মীয় দলের সম্পৃক্ততা আছে কি না? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-6">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                 মাহফিলের সাথে কোনো ধর্মীয় দলের সম্পৃক্ততা আছে কি না?
               </p>
               <img src={inputImg} alt="" className="h-full z-10" />
-              <div className="ml-4 flex  gap-8 radio-container mt-7 md:mt-0">
+              <div className="ml-4 flex gap-2 md:gap-8 radio-container mt-7 md:mt-0">
                 <div className="radio-container">
                   <input
                     type="radio"
@@ -565,8 +583,9 @@ const MahofilForm = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-5 left-20 text-green-700">
+            {/* কোন ঘোরানার মানুষদের মধ্যে হবে? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-6">
+              <p className="absolute md:-top-5 -top-8 left-20 text-green-700">
                 মাহফিলটি কোন ঘোরানার মানুষদের মধ্যে হবে? ( হানাফি/ আহলে হাদিস/
                 তাবলীগ/ জামায়াত/ চরমোনাই ইত্যাদি )
               </p>
@@ -579,8 +598,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-5 left-20 text-green-700">
+            {/* রাজনৈতিক ব্যক্তি উপস্থিত থাকবেন কিনা? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-2">
+              <p className="absolute md:-top-5 -top-8 left-20 text-green-700">
                 মাহফিলে কোনো রাজনৈতিক ব্যক্তি উপস্থিত থাকবেন কিনা? ( থাকলে তার
                 নাম ও রাজনৈতিক পদবী )
               </p>
@@ -593,8 +613,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-2 left-20 text-green-700">
+            {/* পাথেয় খরচ কত? */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-8">
+              <p className="absolute md:-top-2 -top-4 left-20 text-green-700">
                 আবু ত্বহা আদনান এর জন্য সম্ভাব্য পাথেয় খরচ কত?
               </p>
               <img src={inputImg} alt="" className="h-full z-10 md:mt-0 mt-8" />
@@ -606,8 +627,9 @@ const MahofilForm = () => {
                 required
               />
             </div>
-            <div className="md:w-[600px] w-full h-20 flex items-center relative">
-              <p className="absolute -top-5 left-20 text-green-700">
+            {/* পরিবর্তনের এখতিয়ার */}
+            <div className="md:w-[600px] w-full h-16 md:h-20 flex items-center relative md:mb-0 mb-8">
+              <p className="absolute md:-top-5 -top-8 left-20 text-green-700">
                 বক্তার ব্যক্তিগত, অসুস্থতা, প্রশাসনিক ও অন্যান্য প্রাসঙ্গিক
                 কারণে বক্তা কর্তৃক মাহফিল স্থগিত কিংবা তারিখ পরিবর্তন করার
                 সম্পুর্ন এখতিয়ার থাকবে
@@ -617,7 +639,7 @@ const MahofilForm = () => {
                 alt=""
                 className="h-full z-10 mt-14 md:mt-0"
               />
-              <div className="ml-4 flex  gap-8 radio-container mt-14 md:mt-0">
+              <div className="ml-4 flex gap-2 md:gap-8 radio-container mt-14 md:mt-0">
                 <div className="radio-container">
                   <input
                     type="radio"
